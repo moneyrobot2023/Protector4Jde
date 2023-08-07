@@ -69,9 +69,13 @@ COPY --from=1 /usr/src/app/target/*.jar ./
 
 ##### Защитите код Java от декомпиляции
 
-![](https://skrinshoter.ru/s/070823/MuycKVhA.jpg)
+
 
 ##### Защитите код Java от декомпиляции, зашифровав классы Java, не прибегая к запутыванию.
+
+
+
+![](https://github.com/moneyrobot2023/Protector4Jde/blob/main/000.jpg)
 
 
 Поддержка приложений JavaSE, Tomcat Web App, Spring Boot App, GlassFish App, Payara App и Java 8, 
