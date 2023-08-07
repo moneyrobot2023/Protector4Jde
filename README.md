@@ -1,20 +1,20 @@
-# What is Protector4J
+# # Что такое Protector 4 J
 
-[VLINX Protector4J](https://protector4j.com) is a tool to prevent Java applications from decompilation. Protector4J provides a custom native ClassLoader by modifying the JVM. The Java classes are encrypted by AES and decrypted in the native ClassLoader.
+[VLINX Protector4J](https://protector4j.com) это инструмент для предотвращения декомпиляции Java-приложений. Protector предоставляет пользовательский собственный загрузчик классов путем изменения JVM. Классы Java шифруются с помощью AES и расшифровываются в собственном загрузчике классов.
 
-# Quick reference
+# Краткая справка
 
-* **Maintained by**:
+* **Поддерживается**:
 
 	[InAccel](https://inaccel.com)
 
-* **Source of this description**:
+* **Источник этого описания**:
 
 	[inaccel/protector4j repo](https://github.com/inaccel/protector4j)
 
-# How to use this image
+# Как использовать это изображение
 
-You can run a VLINX Protector4J task by using this Docker image directly, passing the Java task parameters to `docker run`:
+Вы можете запустить задачу VLINX Protector 4 J, используя этот образ Docker напрямую, передав параметры задачи Java в `docker run`:
 
 ```console
 $ docker run -it --rm --name my-java-task -u $(id -u):$(id -g) -v $(pwd):/usr/src/myvlinx -w /usr/src/myvlinx inaccel/protector4j \
@@ -25,18 +25,17 @@ $ docker run -it --rm --name my-java-task -u $(id -u):$(id -g) -v $(pwd):/usr/sr
 	jar-path1 jar-path2 ...
 ```
 
-## Building local Docker image (optional)
+## Создание локального образа Docker (необязательно)
 
-This is a base image that you can extend, so it has the bare minimum packages needed. If you add custom package(s) to the `Dockerfile`, then you can build your local Docker image like this:
+Это базовый образ, который вы можете расширить, поэтому в нем есть необходимый минимум пакетов. Если вы добавите пользовательский пакет (ы) в `Dockerfile`, то вы можете создать свой локальный образ Docker следующим образом:
 
 ```console
 $ docker-compose build
 ```
 
-# Multi-stage Builds
+# Многоступенчатые сборки
 
-You can build your application with Maven, protect it with Protector4J and package everything in an image that does not include Maven nor Protector4J using [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build).
-
+Вы можете создать свое приложение с помощью Maven, защитить его с помощью Protector4J и упаковать все в образ, который не включает ни Maven, ни Protector4J, используя [многоступенчатые сборки](https://docs.docker.com/develop/develop-images/multistage-build ).
 ```dockerfile
 # build
 FROM maven
@@ -66,3 +65,4 @@ ENV PATH="${JAVA_HOME}/bin:${PATH}"
 COPY --from=1 /usr/src/app/jre ${JAVA_HOME}
 COPY --from=1 /usr/src/app/target/*.jar ./
 ```
+
