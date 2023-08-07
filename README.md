@@ -65,13 +65,14 @@ ENV PATH="${JAVA_HOME}/bin:${PATH}"
 COPY --from=1 /usr/src/app/jre ${JAVA_HOME}
 COPY --from=1 /usr/src/app/target/*.jar ./
 ```
-![](https://skrinshoter.ru/s/070823/MuycKVhA.jpg)
+
 
 ##### Защитите код Java от декомпиляции
-```
+_
+![](https://skrinshoter.ru/s/070823/MuycKVhA.jpg)
 
 Защитите код Java от декомпиляции, зашифровав классы Java, не прибегая к запутыванию.
-```
+_
 
 Поддержка приложений JavaSE, Tomcat Web App, Spring Boot App, GlassFish App, Payara App и Java 8, 
 Java 11 Environment.
