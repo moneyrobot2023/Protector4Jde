@@ -68,11 +68,11 @@ COPY --from=1 /usr/src/app/target/*.jar ./
 
 
 ##### Защитите код Java от декомпиляции
-_
+
 ![](https://skrinshoter.ru/s/070823/MuycKVhA.jpg)
 
-Защитите код Java от декомпиляции, зашифровав классы Java, не прибегая к запутыванию.
-_
+##### Защитите код Java от декомпиляции, зашифровав классы Java, не прибегая к запутыванию.
+
 
 Поддержка приложений JavaSE, Tomcat Web App, Spring Boot App, GlassFish App, Payara App и Java 8, 
 Java 11 Environment.
