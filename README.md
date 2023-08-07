@@ -65,4 +65,25 @@ ENV PATH="${JAVA_HOME}/bin:${PATH}"
 COPY --from=1 /usr/src/app/jre ${JAVA_HOME}
 COPY --from=1 /usr/src/app/target/*.jar ./
 ```
+![](https://skrinshoter.ru/s/070823/MuycKVhA.jpg)
 
+##### Защитите код Java от декомпиляции
+```
+
+Защитите код Java от декомпиляции, зашифровав классы Java, не прибегая к запутыванию.
+```
+
+Поддержка приложений JavaSE, Tomcat Web App, Spring Boot App, GlassFish App, Payara App и Java 8, 
+Java 11 Environment.
+```
+Руководство по установке плагина eclipse: https://protector4j.com/docs/eclipse-plugin /
+```
+
+После установки, пожалуйста, нажмите Окно -> Показать вид-> Другое ..., затем найдите 
+представление Protector4J в диалоговом окне
+```
+
+Документация: https://protector4j.com/docs/get-started
+```
+
+Сайт: https://protector4j.com
